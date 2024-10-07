@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var concreteStrategies_1 = require("../concreteStrategies");
+var context_1 = require("../context");
+var bard = new concreteStrategies_1.BardStrategy();
+var bardAiModel = new context_1.default(bard);
+console.log(bardAiModel.processInput());
+var gemini = new concreteStrategies_1.GeminiStrategy();
+var geminiAiModel = new context_1.default(gemini);
+console.log(geminiAiModel.processInput());
+var chatgpt = new concreteStrategies_1.ChatGPTStrategy();
+var chatgptAiModel = new context_1.default(chatgpt);
+console.log(chatgptAiModel.processInput());
